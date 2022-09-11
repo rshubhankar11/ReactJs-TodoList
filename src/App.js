@@ -44,19 +44,21 @@ function App() {
   return (
     <div>
       <Router>
-        <Header />
         <Routes>
+          <Route exact path="/" element={<Header />} />
           <Route
             exact
-            path='/addTodo'
-            element={<AddTodo addTodo={addTodo} />}></Route>
+            path="/addTodo"
+            element={<AddTodo addTodo={addTodo} />}
+          ></Route>
           <Route
             exact
-            path='/todos'
-            element={<Todos todos={todos} onDelete={onDelete} />}></Route>
-          <Route exact path='/about' element={<About />}></Route>
+            path="/todos"
+            element={<Todos todos={todos} onDelete={onDelete} />}
+          ></Route>
+          <Route exact path="/about" element={<About />}></Route>
+          <Route exact path="/" element={<Footer />} />
         </Routes>
-        <Footer />
       </Router>
     </div>
   );
