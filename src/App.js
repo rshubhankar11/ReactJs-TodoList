@@ -48,19 +48,15 @@ function App() {
           <Route exact path="/" element={<Header />} />
           <Route
             exact
-            path="ReactJs-TodoList/addTodo"
+            path="/addTodo"
             element={<AddTodo addTodo={addTodo} />}
           ></Route>
           <Route
             exact
-            path="ReactJs-TodoList/todos"
+            path="/todos"
             element={<Todos todos={todos} onDelete={onDelete} />}
           ></Route>
-          <Route
-            exact
-            path="ReactJs-TodoList/about"
-            element={<About />}
-          ></Route>
+          <Route exact path="/about" element={<About />}></Route>
           <Route exact path="/" element={<Footer />} />
         </Routes>
       </Router>
